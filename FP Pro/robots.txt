@@ -1,30 +1,53 @@
+# robots.txt for Footprint Price Action Pro - InfinityAlgo Academy
+# https://infinityalgo-academy.github.io/Footprint-Price-Action-Pro/
+
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://infinityalgoacademy.net/sitemap.xml
-Sitemap: https://infinityalgoacademy.net/fluent-products-sitemap.xml
+# Sitemap
+Sitemap: https://infinityalgo-academy.github.io/Footprint-Price-Action-Pro/sitemap.xml
 
-# Crawl-delay
-Crawl-delay: 1
+# Allow all main pages
+Allow: /index.html
+Allow: /product.html
+Allow: /shop.html
+Allow: /docs.html
+Allow: /about.html
+Allow: /contact.html
+Allow: /privacy.html
+Allow: /terms.html
 
-# Disallow admin and private areas
-Disallow: /wp-admin/
-Disallow: /wp-includes/
-Disallow: /wp-content/plugins/
-Disallow: /wp-content/themes/
-Disallow: /cgi-bin/
-Disallow: /*.php$
-Disallow: /*.inc$
-Disallow: /*.gz$
+# Allow CSS and JavaScript
+Allow: /*.css$
+Allow: /*.js$
 
-# Allow specific important files
-Allow: /wp-content/uploads/
-Allow: /wp-content/themes/*/css/
-Allow: /wp-content/themes/*/js/
-Allow: /wp-content/themes/*/images/
+# Allow images and media
+Allow: /images/
+Allow: /assets/
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.ico$
 
-# Block bad bots
+# Disallow admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /node_modules/
+Disallow: /.vscode/
+Disallow: /.idea/
+
+# Disallow temporary or backup files
+Disallow: /*.bak$
+Disallow: /*.tmp$
+Disallow: /*~$
+Disallow: /*.swp$
+
+# Crawl-delay for specific bots (optional - helps prevent server overload)
 User-agent: AhrefsBot
 Crawl-delay: 10
 
@@ -32,7 +55,60 @@ User-agent: SemrushBot
 Crawl-delay: 10
 
 User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+
+# Allow Google, Bing, and other major search engines full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# Social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+# Block bad bots (optional)
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
 Disallow: /
 
 User-agent: DotBot
 Disallow: /
+
+# Additional information
+# Website: https://infinityalgoacademy.net
+# Contact: me@infinityalgoacademy.net
+# Last Updated: January 29, 2026
